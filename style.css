@@ -6,10 +6,15 @@
 
 html {
 scroll-behavior: smooth;
+background-color: aliceblue;
 }
 
-ul{
-    list-style: none;
+#introduction h1{
+    display: flex;
+    justify-content: center;
+}
+#introduction p{
+    font-family: cursive;
 }
 
 nav {
@@ -57,9 +62,9 @@ nav ul li {
 }
 
 h1 {
-    color: rgb(255, 94, 0);
+    color: orange;
     display: flex;
-    padding-left: 2.5rem ;
+    justify-items: center;
     margin-top: 40px;
 
 }
@@ -70,21 +75,42 @@ p {
     
 }
 
-#skills ul{
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    padding-left: 1.5rem;
-    margin-top: 10px;
-}
 
-#skills ul li {
+#skills button {
 border: 3px solid black;
 border-radius: 10px;
 width: 70px;
 height: 30px;
-justify-content: space-between;
-margin-top: 20px;
 text-align: center;
 margin: 1px;
+margin-top: 20px;
+color: green;
+}
+.two-divs{
+    display: flex;
+    justify-content: space-between;
+}
+.two-divs h3{
+    color: green;
+    margin-top: 20px;
+}
+
+#about h1 {
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    color: green;
+}
+#about p {
+font-family: cursive;
+font-size: 20px;
+}
+
+#skills a{
+    font-size: 20px;
+    font-family: fantasy;
+    color: orange;
+}
+#skills a:hover{
+    color: green;
 }
