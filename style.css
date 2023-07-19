@@ -1,116 +1,201 @@
-* {
-    margin: 0;
+/*General*/
+body * {
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  html,
+  body {
     padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-scroll-behavior: smooth;
-background-color: aliceblue;
-}
-
-#introduction h1{
+    margin: 0;
+    scroll-behavior: smooth;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: bold;
+  }
+  
+  ul li {
+    border: none !important;
+  }
+  
+  /*Containers*/
+  
+  .image-section {
+    height: 100vh;
+    -moz-text-align: center; /*works on Firefox */
+    -webkit-text-align: center; /*works on Safari and Google Chrome*/
+    text-align: center;
+    background-color: #262626;
+    -moz-padding: 20px; /*works on Firefox */
+    -webkit-padding: 20px; /*works on Safari and Google Chrome*/
+    padding: 20px;
+  }
+  
+  .image-section img {
+    max-width: 60%;
+    max-height: 60%;
+    margin-top: 50px !important;
+    object-fit: cover;
+  }
+  
+  .links {
     display: flex;
     justify-content: center;
-}
-#introduction p{
-    font-family: cursive;
-}
-
-nav {
+    flex-wrap: wrap;
+  }
+  
+  .links a {
+    flex: 0 0 10%;
+  }
+  
+  .icon-link {
+    text-decoration: none;
+    font-size: 48px auto;
+    padding: 26px;
+  }
+  
+  .content-container {
+    width: 70%;
+    margin: 0 auto;
+  }
+  
+  .home {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .home p {
+    font-weight: bold;
+  }
+  
+  .home h1 {
+    font-size: 64px;
+  }
+  
+  .html {
+    width: 90%;
+    background-color: #04aa6d;
+  }
+  
+  .w3-ul li {
+    padding: 8px 0px;
+  }
+  
+  /*Utilities*/
+  
+  .w3-margin-top-2 {
+    margin-top: 32px;
+  }
+  
+  .w3-margin-top-4 {
+    margin-top: 64px;
+  }
+  
+  .w3-margin-top-20-percent {
+    margin-top: 20%;
+  }
+  
+  .w3-sticky {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
+  }
+  
+  .w3-fixed {
+    position: fixed;
+    bottom: 0;
     left: 0;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem 3.5rem;
-    background-color: #fcfcfc;
-    box-shadow: 0 3px 5px rgba(0, 0, 0.1);
-}
-
-nav a {
-    color: green;
-    transition: 0.4s;
-}
-nav a:hover {
-    color: rgb(0, 110, 255);
-    border-bottom: 2px solid rgb(0, 110, 255);
-}
-
-nav ul {
-    display: flex;
-    gap: 1.8rem;
-}
-nav ul li {
-    font-weight: 700;
-}
-
-.image {
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    gap: 2.5rem;
-    max-width: 70rem;
-    margin: auto;
-}
-
-.image img {
-    height: 40rem;
-    width: 25rem;
-}
-
-h1 {
-    color: orange;
-    display: flex;
-    justify-items: center;
-    margin-top: 40px;
-
-}
-p {
-    font-weight: 600;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding-left: 1.5rem;
+  }
+  
+  /*Media queries*/
+  @media screen and (max-width: 1200px) {
+    .home {
+      width: 90%;
+    }
+    .content-container {
+      width: 80% !important;
+    }
+  
+    .download-text {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .home {
+      width: 100%;
+    }
+    .home h1 {
+      font-size: 48px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .content-container {
+      width: 100% !important;
+    }
+  
+    .image-section {
+      -moz-padding: 10px; /*works on Firefox */
+      -webkit-padding: 10px; /*works on Safari and Google Chrome*/
+      padding: 10px;
+    }
+  
+    .links a {
+      flex: 0 0 5% !important;
+    }
+  
+    .home {
+      text-align: center;
+      width: 100%;
+    }
+  
+    .home p {
+      font-size: medium !important;
+    }
+  
+    .home h1 {
+      font-size: 32px;
+    }
+    .home h2 {
+      font-size: 24px;
+    }
+  
+    .w3-fixed {
+      position: inherit;
+    }
+  
+    .image-section {
+      height: auto;
+    }
+  
+    .image-section img {
+      max-width: 80%;
+      max-height: 80%;
+    }
+    .lin-div{
+        display: flex;
+    }
     
-}
-
-
-#skills button {
-border: 3px solid black;
-border-radius: 10px;
-width: 70px;
-height: 30px;
-text-align: center;
-margin: 1px;
-margin-top: 20px;
-color: green;
-}
-.two-divs{
-    display: flex;
-    justify-content: space-between;
-}
-.two-divs h3{
-    color: green;
-    margin-top: 20px;
-}
-
-#about h1 {
+  
+    .icon-link {
+      font-size: 24px;
+    }
+  
+    .w3-container,
+    .w3-panel {
+      padding: 0.01em;
+    }
+  
+    .download-text {
+      display: inline-block;
+    }
+  }
+  .my-cards {
     display: flex;
     justify-content: center;
-    background-color: whitesmoke;
-    color: green;
-}
-#about p {
-font-family: cursive;
-font-size: 20px;
 }
 
-#skills a{
-    font-size: 20px;
-    font-family: fantasy;
-    color: orange;
-}
-#skills a:hover{
-    color: green;
-}

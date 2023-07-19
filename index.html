@@ -2,81 +2,264 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio site</title>
-    <link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My CV</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Montserrat font-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script>
 </head>
 
 <body>
-    <nav>
-        <ul class="navigation">
-            <li><a href="#introduction" class="nav-link">Introduction</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
-        </ul>
-    </nav>
-    <section class="image" id="introduction">
-        <img src="https://res.cloudinary.com/dfqwimmnp/image/upload/v1668899841/img.blessing_cww5nd.jpg" alt="myimage">
-
-        <div id="introduction">
-            <h1>Welcome!</h1>
-            <p>Ethusiastic about Tech, with
-                a drive to be better,<br> I've found
-                myself pushing everyday to become<br>
-                a good frontend developer, writer<br>
-                and content creator/manager.
-                There's really no <br>stoping now.
-                Gotta do this..Fighting!!!
-            </p>
+    <section>
+        <!-- MOBILE NAVIGATION -->
+        <div class="w3-container w3-padding-16 w3-border-bottom w3-hide-medium w3-hide-large">
+            <a href="#home" class="w3-bar-item w3-button w3-hover-none">HOME</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+                onclick="toggleNavigation()">&#9776;</a>
         </div>
+        <div id="mobile-nav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-sticky">
+            <a href="#about"
+                class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green"
+                onclick="toggleNavigation()">ABOUT</a>
+            <a href="#projects"
+                class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green"
+                onclick="toggleNavigation()">PROJECTS</a>
+            <a href="#contact"
+                class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green"
+                onclick="toggleNavigation()">CONTACT</a>
+        </div>
+
+        <!-- SOCIAL SECTION -->
+        <section class="image-section w3-quarter w3-fixed w3-padding-small">
+            <!--IMAGE/AVATAR-->
+            <img src="https://res.cloudinary.com/dfqwimmnp/image/upload/v1689773458/WhatsApp_Image_2023-07-19_at_14.30.45_wwhdec.jpg"
+                class="w3-circle w3-border w3-border-sand" style="border-width: 3px !important;" />
+            <!--SCIAL NETWORK BUTTONS-->
+            <div class="links w3-margin-top w3-padding-small">
+                <a class="icon-link w3-text-sand w3-hover-text-amber" href="#facebook" target="_blank">
+                    <i data-feather="facebook"></i>
+                </a>
+                <a class="icon-link w3-text-sand w3-hover-text-amber" href="instagram.com/_gracetory" target="_blank">
+                    <i data-feather="instagram"></i>
+                </a>
+                <a class="icon-link w3-text-sand w3-hover-text-amber" href="#twitter" target="_blank">
+                    <i data-feather="twitter"></i>
+                </a>
+                <a class="icon-link w3-text-sand w3-hover-text-amber" href="#linkedin" target="_blank">
+                    <i data-feather="linkedin"></i>
+                </a>
+            </div>
+            <!--CV DOWNLOAD BUTTON-->
+            <div class="w3-container w3-padding-16">
+                <a href="./resume.pdf"
+                    class="w3-amber w3-hover-amber w3-button w3-round-small w3-hover-deep-orange w3-padding-large"
+                    target="_blank" download="resume.pdf">
+                    <i data-feather="arrow-down" style="vertical-align: -0.35em;"></i>
+                    <span class="w3-margin-left download-text">DOWNLOAD CV</span>
+                </a>
+            </div>
+        </section>
+
+        <!--CV CONTENT SECTION-->
+        <section class="w3-threequarter w3-padding-large w3-right">
+            <!--DESKTOP NAVIGATION-->
+            <div class="w3-container w3-padding-large w3-border-bottom w3-hide-small">
+                <a href="#home"
+                    class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green">HOME</a>
+                <a href="#contact"
+                    class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small"
+                    style="border-width: 2px !important;" onclick="toggleNavigation()">CONTACT</a>
+                <a href="#projects"
+                    class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small"
+                    style="border-width: 2px !important;" onclick="toggleNavigation()">PROJECTS</a>
+                <a href="#about"
+                    class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small"
+                    style="border-width: 2px !important;" onclick="toggleNavigation()">ABOUT</a>
+            </div>
+            <div class="content-container w3-margin-top-2">
+                <!--HOME SECTION-->
+                <div id="home" class="home w3-container w3-margin-top-4 w3-cursive">
+                    <p style="font-style: italic; font-size:x-large;">"Ethusiastic about Tech, with
+                        a drive to be better each day.
+                        I believe that every new day
+                        comes with new opportunities,
+                        and my daily goal is to be
+                        prepared for these opportunities"</p>
+                    <h1>Blessing Ukanah (TereCodes)</h2>
+                        <h2>Frontend Developer</h3>
+                            <p></p>
+                </div>
+
+                <!--ABOUT SECTION-->
+                <div id="about" class="w3-container w3-margin-top-20-percent w3-cursive w3-large">
+                    <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">ABOUT</h2>
+                    <p class="w3-margin-top-2">
+                        Hello there, I'm Blessing, a budding frontend developer.
+                        Armed with my trusty keyboard and a relentless drive to learn,
+                        I've been steadily honing my skills in frontend development.
+                    </p>
+                    <p class="">
+                        My journey in tech and coding,
+                        albeit challenging, has been
+                        profoundly rewarding. It's incredible
+                        to think that only a year ago,
+                        I was a novice with a dream.
+                        Now, I find myself confidently
+                        Translating design mockups
+                        into interactive web pages.
+                    </p>
+                    <p class="">
+                        When i'm not looking for missing
+                        semicolons and brackets, you'll either find me
+                        putting my imagination to good use
+                        by writing a good story/article
+                        or you'll find me watching an interesting anime.
+                    </p>
+                </div>
+
+                <!--projects-->
+                <div id="projects" class="w3-container w3-margin-top-20-percent w3-cursive">
+                    <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">PROJECTS & SKILLS
+                    </h2>
+                    <div class="w3-container w3-margin-top-2 w3-cursive">
+
+                        <!--PROJECT SECTION-->
+                        <div id="projects" class="my-cards">
+
+                            <div class="card" style="width: 25rem;">
+                                <img src="https://res.cloudinary.com/dfqwimmnp/image/upload/v1689278173/glenn-carstens-peters-RLw-UC03Gwc-unsplash_epmlxo.jpg"
+                                    class="card-img-top" alt="todo">
+                                <div class="card-body">
+                                    <h5 class="card-title">Todo App</h5>
+                                    <p class="card-text"> A simple todo web app that allows you create, edit and delete
+                                        a list of todo's
+                                    </p>
+                                    <a href="https://terecodes-todo-list.netlify.app/" class="btn btn-secondary">View
+                                        this
+                                        project</a>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 25rem;">
+                                <img src="https://res.cloudinary.com/dfqwimmnp/image/upload/v1689279333/istockphoto-1179667626-170667a_zup3rj.webp"
+                                    class="card-img-top" alt="loanapp">
+                                <div class="card-body">
+                                    <h5 class="card-title">Loan Wise</h5>
+                                    <p class="card-text">Loan wise is a loan prediction app that analyzes the
+                                        eligibility of borrowers.
+                                    </p>
+                                    <a href="https://app.netlify.com/sites/loan-wise-dev/overview"
+                                        class="btn btn-secondary">View this
+                                        project</a>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 25rem;">
+                                <img src="https://res.cloudinary.com/dfqwimmnp/image/upload/v1689282057/alexey-savchenko-k4Akpt5-Sfk-unsplash_t1ir9d.jpg"
+                                    class="card-img-top" alt="game pad">
+                                <div class="card-body">
+                                    <h5 class="card-title">starwars</h5>
+                                    <p class="card-text">A react project that provides information about the starwars
+                                        franchise.</p>
+                                    <a href="https://brilliant-madeleine-0a7818.netlify.app/"
+                                        class="btn btn-secondary">View this
+                                        project</a>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <!--SKILLS SECTION-->
+                        <div class="w3-container w3-margin-top-2 w3-cursive">
+                            <h3 class="w3-border-amber">MY SKILLS</h3>
+                            <!--SOFT SKILLS-->
+                            <h4>Soft skills</h4>
+                            <ul class="w3-ul" style="font-weight: 500;">
+                                <li>Excelent communication skill</li>
+                                <li>Excellent leadership skills</li>
+                                <li>Good collaboration skills</li>
+                            </ul>
+                            <!--TECHNICAL SKILLS-->
+                            <h4>Technical skills</h4>
+                            <ul class="w3-ul" style="font-weight: 500;">
+                                <li>Html</li>
+                                <li>css</li>
+                                <li>javascript</li>
+                                <li>react</li>
+                                <li>bootstrap</li>
+                                <li>github</li>
+                            </ul>
+                        </div>
+
+                        <!--INTERESTS SECTION-->
+                        <div class="w3-container w3-margin-top-2 w3-cursive">
+                            <h3 class="w3-border-amber">MY HOBBIES AND INTERESTS</h3>
+                            <ul class="w3-ul" style="font-weight: 500;">
+                                <li>Writing/storytelling</li>
+                                <li>Anime</li>
+                                <li>Gaming</li>
+                                <li>Nature</li>
+                            </ul>
+                        </div>
+
+                        <a href="https://github.com/TereCodes">more on github..</a>
+
+
+                    </div>
+
+                    <!--CONTACT SECTION-->
+                    <div id="contact" class="w3-container w3-margin-top-20-percent w3-cursive">
+                        <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">MY CONTACT
+                            DETAILS</h3>
+                            <div class="w3-margin-top-2" style="font-weight: 500;">
+                                <p>Name: Blessing Ukanah</p>
+                                <p>Adress: Lagos, Nigeria.</p>
+                                <p>E-mail: ukgracetory@gmail.com</p>
+                            </div>
+                    </div>
+
+                    <!--FOOTER-->
+                    <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+                    <footer class="w3-container w3-border-top w3-center w3-margin-top-4">
+                        <p>© 2023 - Blessing Ukanah</p>
+                        <p class="w3-small">This website was made by TereCodes.</p>
+                        <a class="w3-button w3-round-xxlarge w3-small w3-light-grey" </a>
+                            <!-- End footer -->
+                    </footer>
+
+                    <!--END OF CV SECTION-->
+        </section>
     </section>
-
-    <div id="about">
-        <h1> About me</h1>
-        <p>
-            My name is blessing. I write, i come up
-            with content ideas for brands/products and i code.
-            Currently learning to code at stutern.
-            My core strength is coming up with new
-            creative ideas, bringing that idea to life by working with a team and/or
-            working alone when the need arises.
-            My tech journey so far has been kind of
-            challenging, but i'm super sure i want
-            to see this through to the end.
-            Below is my current skill set.
-        </p>
-    </div>
-    <div class="two-divs">
-        <div id="skills">
-            <h1>Skill set (frontend development)</h1>
-
-            <button>HTML</button>
-            <button>CSS</button>
-            <button>javaScript</button>
-
-            <h3>Here's a link to some of my work on github</h2>
-                <a href="https://github.com/TereCodes">Click me!</a>
-        </div>
-
-        <div id="skills">
-            <h1>Skill set (content mamagement)</h1>
-
-            <button>Ideation</button>
-            <button>Writing</button>
-            <button>Scripting</button>
-            <button>shooting</button>
-            <button>Editing</button>
-
-
-
-            <h3>Here's a link to some of my work on wordpress</h2>
-                <a href="https://gracetory543345577.wordpress.com/2022/08/13/the-plan/">Click me!</a>
-        </div>
-    </div>
-
+    <script>
+        // Function to toggle mobile navigation
+        function toggleNavigation() {
+            let nav = document.getElementById("mobile-nav");
+            if (nav.classList.contains('w3-show')) {
+                nav.classList.remove('w3-show');
+            } else {
+                nav.classList.add('w3-show');
+            }
+        }
+    </script>
+    <script>
+        // Script to load feather icons
+        feather.replace()
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
+
